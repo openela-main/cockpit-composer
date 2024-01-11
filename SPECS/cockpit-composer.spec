@@ -1,5 +1,5 @@
 Name:           cockpit-composer
-Version:        45
+Version:        47
 Release:        1%{?dist}
 Summary:        Composer GUI for use with Cockpit
 
@@ -8,6 +8,7 @@ URL:            http://weldr.io/
 Source0:        https://github.com/osbuild/cockpit-composer/releases/download/%{version}/cockpit-composer-%{version}.tar.gz
 
 BuildArch:      noarch
+BuildRequires:  libappstream-glib
 
 Requires:       cockpit
 %if 0%{?fedora} >= 33 || 0%{?rhel} >= 8
@@ -31,6 +32,7 @@ the cloud. It integrates into Cockpit as a frontend for osbuild.
 mkdir -p %{buildroot}/%{_datadir}/cockpit/composer
 cp -a public/* %{buildroot}/%{_datadir}/cockpit/composer
 mkdir -p %{buildroot}/%{_datadir}/metainfo/
+appstream-util validate-relax --nonet public/io.weldr.cockpit-composer.metainfo.xml
 cp -a public/io.weldr.cockpit-composer.metainfo.xml %{buildroot}/%{_datadir}/metainfo/ 
 
 %files
@@ -40,6 +42,12 @@ cp -a public/io.weldr.cockpit-composer.metainfo.xml %{buildroot}/%{_datadir}/met
 %{_datadir}/metainfo/*
 
 %changelog
+* Mon Aug 28 2023 imagebuilder-bot <imagebuilder-bots+imagebuilder-bot@redhat.com> - 47-1
+- New upstream release
+
+* Fri Aug 25 2023 imagebuilder-bot <imagebuilder-bots+imagebuilder-bot@redhat.com> - 46-1
+- New upstream release
+
 * Wed Mar 15 2023 imagebuilder-bot <imagebuilder-bots+imagebuilder-bot@redhat.com> - 45-1
 - New upstream release
 
