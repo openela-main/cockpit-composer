@@ -1,5 +1,5 @@
 Name:           cockpit-composer
-Version:        50
+Version:        52
 Release:        1%{?dist}
 Summary:        Composer GUI for use with Cockpit
 
@@ -42,6 +42,15 @@ cp -a public/org.image-builder.cockpit-composer.metainfo.xml %{buildroot}/%{_dat
 %{_datadir}/metainfo/*
 
 %changelog
+* Thu Aug 22 2024 imagebuilder-bot <imagebuilder-bots+imagebuilder-bot@redhat.com> - 52-1
+- New upstream release
+
+* Thu Aug 22 2024 Packit <hello@packit.dev> - 51.1-1
+Integrates with packit, tmt, and testing farm.
+
+* Tue Aug 20 2024 Packit <hello@packit.dev> - 51-1
+- remove empty customizations from blueprint when creating one
+
 * Mon Feb 26 2024 imagebuilder-bot <imagebuilder-bots+imagebuilder-bot@redhat.com> - 50-1
 - New upstream release
 
