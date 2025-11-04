@@ -1,5 +1,5 @@
 Name:           cockpit-composer
-Version:        52
+Version:        53.1
 Release:        1%{?dist}
 Summary:        Composer GUI for use with Cockpit
 
@@ -42,6 +42,12 @@ cp -a public/org.image-builder.cockpit-composer.metainfo.xml %{buildroot}/%{_dat
 %{_datadir}/metainfo/*
 
 %changelog
+* Thu Oct 2 2025 imagebuilder-bot <sraymaek@redhat.com> - 53.1-1
+- New upstream release
+
+* Wed Dec 11 2024 imagebuilder-bot <imagebuilder-bots+imagebuilder-bot@redhat.com> - 53-1
+- New upstream release
+
 * Thu Aug 22 2024 imagebuilder-bot <imagebuilder-bots+imagebuilder-bot@redhat.com> - 52-1
 - New upstream release
 
